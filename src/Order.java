@@ -42,14 +42,15 @@ public class Order {
 
         Order order = (Order) obj;
 
-        if (Objects.equals(customer, order.customer)){
-            return false;
-        }
-        if (Arrays.equals(basket, order.basket)){
-            return false;
-        }
-            return true;
-        //return Objects.equals(customer,order.customer) && Arrays.equals(basket,order.basket);
+        if (Objects.equals(customer, order.customer)) return false;
+        if (this.basket.length != order.basket.length) return false;
+        if (this.basket == null || order.basket == null) return false;
 
+        for (int i = 0; i < this.basket.length; i++){
+            if (!this.basket[i].equals(order.basket[i])){
+                break;
+            }
+        }
+        return true;
     }
 }

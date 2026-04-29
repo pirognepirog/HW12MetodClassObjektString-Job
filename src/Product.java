@@ -32,7 +32,7 @@ public class Product {
             //товары равны при совпадении id и category
         return id == product.id &&
                 Double.compare(product.price, price) == 0 &&
-                Objects.equals(name, product.name) &&
+               // Objects.equals(name, product.name) &&
                 Objects.equals(category, product.category);
     }
 
