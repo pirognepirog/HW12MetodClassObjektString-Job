@@ -2,6 +2,12 @@ import java.util.Objects;
 
 public class Product {
 
+    // инициализирую поля класса
+    private int id;
+    private String name;
+    private double price;
+    private String category;
+
     //создаю конструктов
     public Product (int id, String name, double price, String category){
         this.id = id;
@@ -9,20 +15,37 @@ public class Product {
         this.price = price;
         this.category = category;
     }
+    // инициализация геттеров и сеттеров для чтения и записи данных
 
-    // инициализирую поля класса
-    public int id;
-    public String name;
-    public double price;
-    public String category;
-
-
+    public Integer getid(){
+        return id;
+    }
+        public void setid (Integer id){
+            this.id = id;
+        }
+    public String getName(){
+        return name;
+    }
+        public void setName (String name){
+            this.name = name;
+        }
+    public Double getPrice(){
+        return price;
+    }
+        public void setPrice (Double name){
+            this.price = price;
+        }
+    public String getCategory(){
+        return category;
+    }
+        public void setCategory (String category){
+            this.category = category;
+        }
     @Override
     public String toString() {
         return name + " (id=" + id + ", цена=" + price + ", категория=" + category + ")";
     }
     @Override // переопределяю метод класса
-
         public boolean equals (Object o){
             if (this == o)return true;
             if (o == null || getClass() != o.getClass()){
@@ -35,6 +58,4 @@ public class Product {
                // Objects.equals(name, product.name) &&
                 Objects.equals(category, product.category);
     }
-
-
 }

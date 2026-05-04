@@ -17,18 +17,18 @@ public class Main {
         //без использования переменных, которые ранее были использованы для теста
         //по условию - товары равны при совпадении id и category (было ошибочно добавлено product.name)
         System.out.println("Сравнение product1 и product2");
-        System.out.println("product1 id = " + product1.id + ", категория " + product1.category +
-                " / product2 id = " + product2.id  + ", категория " + product2.category +
+        System.out.println("product1 id = " + product1.getid() + ", категория " + product1.getCategory() +
+                " / product2 id = " + product2.getid()  + ", категория " + product2.getCategory() +
                 ", результат сравнения = " + product1.equals(product2));
 
         System.out.println("Сравнение product3 и product4");
-        System.out.println("product3 id = " + product3.id + ", категория " + product3.category +
-                " / product4 id = " + product4.id  + ", категория " + product4.category +
+        System.out.println("product3 id = " + product3.getid() + ", категория " + product3.getCategory() +
+                " / product4 id = " + product4.getid()  + ", категория " + product4.getCategory() +
                 ", результат сравнения = " + product3.equals(product4));
 
         System.out.println("Сравнение product4 и product5");
-        System.out.println("product4 id = " + product4.id + ", категория " + product4.category +
-                " / product5 id = " + product5.id  + ", категория " + product5.category +
+        System.out.println("product4 id = " + product4.getid() + ", категория " + product4.getCategory() +
+                " / product5 id = " + product5.getid()  + ", категория " + product5.getCategory() +
                 ", результат сравнения = " + product4.equals(product5));
 
 
